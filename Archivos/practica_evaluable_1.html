@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bentham&family=Klee+One&display=swap" rel="stylesheet">
+<body>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Contenido de la página -->
+<header>
+  <div class="container">
+    <div class="boton">
+     <button div class="btn1"><b>Inicio</b> </button>
+    <button div class="btn2"><b>Información</b></button> 
+    <button div class="btn3"><b>Formualrio</b> </button>
+    </div>
+  <nav>
+    <div class=" content">
+    <div class="texto"><h1><b>Inicio</b></h1>
+      <p>Hola mi nombre es Manuel Morales MORILLA y esta es la practica evaluable HLC 2</p>
+        <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*XFKvzn30CglSpb3o" width="300px" height="200px" style="border-radius: 10px;">
+    </div>
+    <div class="texto"><h1><b>Información</b></h1>
+      <div class="contenid">
+        El examen de HLC consta de las siguientes partes:
+        <ul>
+          <li>Un menu lateral</li>
+          <li>Un fromualrio</li>
+          <li>Varios elementos HTML como:
+            <ul>
+              <li>Titulos</li>
+              <li>Imagenes</li>
+              <li>Listas</li>
+            </ul>
+              
+          </li>
+        </ul>
+        Algunos datos sobre la practica son:
+        <table border="1">
+          <thead class="titulo">
+            <tr >
+              <td style="color: white;">Forma de Entrega</td>
+              <td style="color: white;">Tiempo</td style="color: white;">
+              <td style="color: white;">Calificación</td>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <td>GitHub y GitHub pages</td>
+              <td>2 horas</td>
+              <td>Numerica</td>
+            </tr>
+          </thead>
+         
+
+        </table>
+      </div>
+  </div>
+    
+      <div class="texto"><h1><b>Formulario</b></h1>
+        <div class="contenido">
+          <form action="tab3">
+          <label for="nombre"><b>Nombre</b></label><BR></BR>
+          <input type="text" name="nombre" id="tab3" placeholder="Ingrese su nombre"><br><br>
+          <label for="nombre"><b>Correo Electrónico</b></label><br>
+          <input type="text" name="nombre" id="tab3" placeholder="Ingrese su Correo"><br><br>
+          <label for="nombre"><b>Mensaje</b></label><br>
+          <input type="text" name="nombre" id="tab3" style="width:70% ;" placeholder="Escriba su mensaje aqui"><br><br>
+          <button class="boton" style="background-color: #3498db; width: 10%;">Enviar</button>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+  </nav>
+   
+</div>
+</header>
+  <!-- Fin contenido de la página -->
+
+  <script>
+    function showTabById(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.id === tabId);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.menu button');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tabId = button.id.replace('btn', 'tab');
+          showTabById(tabId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
